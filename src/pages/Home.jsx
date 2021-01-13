@@ -1,6 +1,9 @@
 import { Component } from "react";
 import { blogsUrl, fetchData } from "../api/fetchData";
 import BlogCard from "../components/BlogCard";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+
 class Home extends Component {
   state = {
     blogs: [],
@@ -18,17 +21,18 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home Pages</h1>
+        <Navigation />
         <div>
           {this.state.blogs.map((blog) => {
             console.log(blog);
             return (
               <div>
-                <BlogCard blog={blog} key={blog.id} />;
+                <BlogCard blog={blog} key={blog.id} />
               </div>
             );
           })}
         </div>
+        <Footer />
       </div>
     );
   }

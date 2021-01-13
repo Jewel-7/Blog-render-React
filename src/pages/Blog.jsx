@@ -1,7 +1,9 @@
 import { Component } from "react";
 import { blogsUrl, fetchData } from "../api/fetchData";
 import { Link } from "react-router-dom";
-import AsideCard from "../components/AsideCard";
+import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
+import styles from "../styles/Blog.module.css";
 
 class Blog extends Component {
   state = {
@@ -38,35 +40,50 @@ class Blog extends Component {
     let { blog } = this.state;
 
     return (
-      <div>
-        <div>
-          <img src={blog.imageUrl} alt="blog" />
+      <div className={styles["nav-b"]}>
+        <Navigation />
+        <div className={styles["flex"]}>
+          <div className={styles["flex1"]}>
+            <div>
+              <img
+                className={styles["blog-image"]}
+                src={blog.imageUrl}
+                alt="blog"
+              />
+            </div>
+            <h4 className={styles["blog-author"]}> Author - {blog.author}</h4>
+            <h1 className={styles["blog-title"]}> Title - {blog.title}</h1>
+            <p className={styles["blog-content"]}>{blog.content}</p>
+          </div>
+          <div className={styles["flex2"]}>
+            <div className={styles["blog-links"]}>
+              <h3>Related Links</h3>
+              {this.state.blog.links &&
+                this.state.blog.links.map((link) => {
+                  return (
+                    <div key={link.id}>
+                      <Link
+                        to={{
+                          pathname: `/blogs/${link.id}`,
+                        }}
+                      >
+                        <p
+                          onClick={() => this.relatedLink(link.id)}
+                          className={styles["blog-link"]}
+                        >
+                          {link.title}
+                          <h1 type="id" name="id" id="id">
+                            {this.state.blogId}
+                          </h1>
+                        </p>
+                      </Link>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
         </div>
-        <h4>{blog.author}</h4>
-        <h1>{blog.title}</h1>
-        <p>{blog.content}</p>
-        <div>
-          <h3>links</h3>
-          {this.state.blog.links &&
-            this.state.blog.links.map((link) => {
-              return (
-                <div key={link.id}>
-                  <Link
-                    to={{
-                      pathname: `/blogs/${link.id}`,
-                    }}
-                  >
-                    <p onClick={() => this.relatedLink(link.id)}>
-                      {link.title}
-                      <h1 type="id" name="id" id="id">
-                        {this.state.blogId}
-                      </h1>
-                    </p>
-                  </Link>
-                </div>
-              );
-            })}
-        </div>
+        <Footer />
       </div>
     );
   }

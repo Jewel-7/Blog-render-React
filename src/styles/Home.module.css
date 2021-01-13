@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url("https://i.pinimg.com/originals/52/45/ea/5245ea95d8a97a29121a335120ba728a.gif")
+    repeat;
+  background-size: auto;
+}
+.box {
+  width: 450px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: white;
+  background: url("https://images.pexels.com/photos/2832039/pexels-photo-2832039.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+    no-repeat;
+  background-size: cover;
+  font-family: "Century Gothic", sans-serif;
+}
+.banner-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.blog-title {
+  color: white;
+  text-decoration: none;
+}
+.header-section {
+  display: flex;
+
+  height: 100px;
+  background-color: black;
+}
+.nav-link {
+  color: blanchedalmond;
+  display: inline;
+  padding: 10px;
+}
+.navigation {
+  margin-left: 80vw;
+}
+.footer-back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  background-color: black;
+  color: #fff;
+}
+.last-con {
+  color: white;
+  font-size: 20px;
+  padding-top: 30px;
+  margin-left: 18vw;
+}
+.icon {
+  margin-left: 45vw;
+}
+@media (max-width: 1200px) {
+  .navigation {
+    margin-left: 80vw;
+  }
+}
+
+@media (max-width: 760px) {
+  .navigation {
+    margin-left: 70vw;
+  }
+  .box {
+    width: 250px;
+  }
+  .last-con {
+    margin-left: 7vw;
+  }
+}
+@media (max-width: 600px) {
+  .box {
+    width: 200px;
+  }
+}
