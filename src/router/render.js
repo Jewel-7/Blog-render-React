@@ -1,18 +1,19 @@
 import { Component } from "react";
 import Home from "../pages/Home";
-import Profile from "../pages/Profile";
+import Blog from "../pages/Blog";
+
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-class Router extends Component {
+class Render extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/blogs/:id" exact component={Profile} />; }} />
+          <Route path="/blogs/:id" exact component={Blog} />
         </Switch>
       </BrowserRouter>
     );
   }
 }
 
-export default Router;
+export default Render;
