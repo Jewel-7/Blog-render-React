@@ -1,17 +1,23 @@
-Simple Server-Side-Rendering Website Made by using Next.js
+Simple Blog-Rendering Website Made by using React
 
 It consits of a Home Page With Navbar And footer
 
-Navbar consists navlink to render between pages like Raw ,Contentstack,Surfboard
+Navbar consists navlink to navigate back to Home
 
-Sliders are used For sliding the banner image
+
+Home page consists of Tiles or Card of Each Blog , ON clicking it a whole web page for blog opens up
+
+Related links can be used to render blogs
+
+Data is fetched from a backend server that was hosted in heroku
+
 
 ##To Run On Local Machine
-Go to terminal and type git clone https://github.com/Jewel-7/ssr-website.git
+Go to terminal and type git clone https://github.com/Jewel-7/Blog-render-React.git
 
 After cloning do npm install
 
-After installing all the dependencies do npm run dev
+After installing all the dependencies do npm run start
 
 ##Live Link
 https://blogrender-react.vercel.app/
