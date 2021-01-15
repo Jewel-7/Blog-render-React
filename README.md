@@ -1,3 +1,26 @@
+Simple Server-Side-Rendering Website Made by using Next.js
+
+It consits of a Home Page With Navbar And footer
+
+Navbar consists navlink to render between pages like Raw ,Contentstack,Surfboard
+
+Sliders are used For sliding the banner image
+
+##To Run On Local Machine
+Go to terminal and type git clone https://github.com/Jewel-7/ssr-website.git
+
+After cloning do npm install
+
+After installing all the dependencies do npm run dev
+
+##Live Link
+https://blogrender-react.vercel.app/
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
