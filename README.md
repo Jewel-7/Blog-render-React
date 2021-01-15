@@ -12,14 +12,14 @@ Related links can be used to render blogs
 Data is fetched from a backend server that was hosted in heroku
 
 
-##To Run On Local Machine
+## To Run On Local Machine
 Go to terminal and type git clone https://github.com/Jewel-7/Blog-render-React.git
 
 After cloning do npm install
 
 After installing all the dependencies do npm run start
 
-##Live Link
+## Live Link
 https://blogrender-react.vercel.app/
 
 
