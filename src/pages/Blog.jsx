@@ -13,6 +13,7 @@ class Blog extends Component {
   componentDidMount = async () => {
     try {
       let data = await fetchData(`${blogsUrl}/${this.props.match.params.id}`);
+
       this.setState({ blog: data });
     } catch (err) {
       console.log("******", err);
